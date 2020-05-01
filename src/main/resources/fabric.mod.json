@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "modid",
+  "version": "${version}",
+
+  "name": "QuestWeaver",
+  "description": "A fabric questbook implementation",
+  "authors": [
+    "Acro"
+  ],
+  "contact": {
+    "homepage": "http://acro.rf.gd",
+    "sources": "https://github.com/JSJBDEV/QuestWeaver"
+  },
+
+  "license": "MIT",
+  "icon": "assets/questweaver/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "gd.rf.acro.questweaver.QuestWeaver"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
