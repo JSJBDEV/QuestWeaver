@@ -5,7 +5,6 @@ import gd.rf.acro.questweaver.quests.QuestAssembly;
 import gd.rf.acro.questweaver.screens.QuestScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -59,7 +58,7 @@ public class QuestBookItem extends Item {
     {
         try {
             if(!world.isClient()){
-                List<String> scoreboards = FileUtils.readLines(new File("./saves/setup.qw"),"utf-8");
+                List<String> scoreboards = FileUtils.readLines(new File("./config/QuestWeaver/setup.qw"),"utf-8");
                 scoreboards.forEach(command->
                 {
                     world.getServer().getCommandManager().execute(world.getServer().getCommandSource(),command);

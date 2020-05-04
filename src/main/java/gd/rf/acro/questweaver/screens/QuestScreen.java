@@ -4,20 +4,14 @@ import gd.rf.acro.questweaver.QuestWeaver;
 import gd.rf.acro.questweaver.Utils;
 import gd.rf.acro.questweaver.quests.Connector;
 import gd.rf.acro.questweaver.quests.Quest;
-import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.TexturedButtonWidget;
-import net.minecraft.client.util.InputUtil;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import sun.awt.ExtendedKeyCodes;
 
-import java.awt.*;
 import java.util.List;
 import java.util.Set;
 
@@ -92,13 +86,13 @@ public class QuestScreen extends Screen {
         int i = (twidht-315)/2;
         renderBackground();
         drawBackground(mouseX,mouseY,delta);
-        this.drawString(this.font,cat,i+18,5, Color.CYAN.getRGB());
+        this.drawString(this.font,cat,i+18,5, 0xFF00FFFF);
         super.render(mouseX,mouseY,delta);
         buttons.forEach(button->
         {
             if(button.isHovered())
             {
-                this.drawString(this.font,button.getMessage(),mouseX+5,mouseY+5, Color.CYAN.getRGB());
+                this.drawString(this.font,button.getMessage(),mouseX+5,mouseY+5, 0xFF00FFFF);
             }
         });
 

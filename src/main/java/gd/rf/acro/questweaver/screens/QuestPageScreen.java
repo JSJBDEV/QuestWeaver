@@ -1,22 +1,14 @@
 package gd.rf.acro.questweaver.screens;
 
-import gd.rf.acro.questweaver.QuestWeaver;
 import gd.rf.acro.questweaver.Utils;
-import gd.rf.acro.questweaver.quests.Connector;
 import gd.rf.acro.questweaver.quests.Quest;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.TexturedButtonWidget;
-import net.minecraft.client.resource.language.I18n;
-import net.minecraft.item.Items;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import java.awt.*;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Set;
 
 public class QuestPageScreen extends Screen {
@@ -54,7 +46,7 @@ public class QuestPageScreen extends Screen {
         String[] lines = text.split(";n");
         for (int i = 0; i < lines.length; i++) {
             int y = 24+i*10;
-            this.drawString(font, lines[i],x,y, Color.WHITE.getRGB());
+            this.drawString(font, lines[i],x,y, 0xFFFFFFFF);
         }
 
 

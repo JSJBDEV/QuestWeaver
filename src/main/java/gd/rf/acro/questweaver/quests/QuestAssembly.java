@@ -1,14 +1,10 @@
 package gd.rf.acro.questweaver.quests;
 
-import net.minecraft.scoreboard.ScoreboardCriterion;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.World;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class QuestAssembly {
@@ -18,7 +14,7 @@ public class QuestAssembly {
         List<Connector> connectors = new ArrayList<>();
         List<String> catergories = new ArrayList<>();
         try {
-            List<String> questStrings = FileUtils.readLines(new File("./saves/quests.qw"),"utf-8");
+            List<String> questStrings = FileUtils.readLines(new File("./config/QuestWeaver/quests.qw"),"utf-8");
             questStrings.forEach(entry->{
                 if(entry.charAt(0)=='!')
                 {

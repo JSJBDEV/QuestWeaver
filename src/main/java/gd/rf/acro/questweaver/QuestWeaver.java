@@ -2,21 +2,15 @@ package gd.rf.acro.questweaver;
 
 import gd.rf.acro.questweaver.items.QuestBookItem;
 import gd.rf.acro.questweaver.quests.EntryList;
-import gd.rf.acro.questweaver.quests.Quest;
-import gd.rf.acro.questweaver.quests.QuestAssembly;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Items;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-
-import java.util.EventListener;
-import java.util.List;
 
 public class QuestWeaver implements ModInitializer {
 	public static final QuestBookItem QUEST_BOOK = new QuestBookItem(new Item.Settings().group(ItemGroup.MISC));
